@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Nur Muhammad | Graphic & Digital Marketer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      body {
+        background-color: #f4f4f8;
+        color: #333;
+        line-height: 1.6;
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes scaleIn {
+        0% {
+          transform: scale(0.9);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      nav {
+        background: #ffffff;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      .nav__logo a {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: #0077ff;
+      }
+      .nav__logo span {
+        color: #222;
+      }
+      header {
+        background-color: #e6f0ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 6rem 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: fadeInUp 1.5s ease;
+      }
+      .header__container p,
+      .header__container h1,
+      .header__container h2 {
+        animation: fadeInUp 1.5s ease;
+      }
+      .header__container p {
+        font-size: 1.1rem;
+      }
+      .header__container h1 {
+        font-size: 3rem;
+        margin: 0.5rem 0;
+        color: #222;
+      }
+      .header__container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .header__container span {
+        color: #0077ff;
+      }
+      .btn {
+        padding: 0.7rem 1.5rem;
+        background: #0077ff;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: transform 0.3s ease, background 0.3s;
+      }
+      .btn:hover {
+        background: #005fcc;
+        transform: scale(1.05);
+      }
+      .video {
+        display: inline-flex;
+        align-items: center;
+        color: #0077ff;
+        margin-left: 1rem;
+        text-decoration: none;
+      }
+      .play {
+        background: #0077ff;
+        color: #fff;
+        border-radius: 50%;
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+      }
+      .section__container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 4rem 2rem;
+      }
+      .section__title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        animation: fadeInUp 1.2s ease;
+      }
+      .section__subtitle {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+      .about__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+      }
+      .about__image img {
+        max-width: 100%;
+        border-radius: 1rem;
+        animation: scaleIn 1s ease-in-out;
+      }
+      .service__grid,
+      .project__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .service__card,
+      .project__card {
+        background: #fff;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        animation: fadeInUp 1s ease;
+      }
+      .service__card i {
+        font-size: 2rem;
+        color: #0077ff;
+        margin-bottom: 1rem;
+      }
+      .read__more {
+        color: #0077ff;
+        display: inline-block;
+        margin-top: 1rem;
+        text-decoration: none;
+      }
+      footer {
+        background: #1b1b1b;
+        color: #fff;
+        padding: 4rem 2rem;
+      }
+      .footer__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      .footer__form input,
+      .footer__form textarea {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 0.5rem;
+      }
+      .footer__form button {
+        background: #0077ff;
+        color: #fff;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 50px;
+        transition: transform 0.3s ease;
+      }
+      .footer__form button:hover {
+        transform: scale(1.05);
+      }
+      .social__icons .icon {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-right: 1rem;
+        transition: color 0.3s, transform 0.3s;
+      }
+      .social__icons .icon:hover {
+        color: #0077ff;
+        transform: scale(1.2);
+      }
+      @media (max-width: 768px) {
+        .about__container {
+          flex-direction: column;
+        }
+        .footer__container {
+          flex-direction: column;
+        }
+        header h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- unchanged content -->
+  </body>
+</html>
